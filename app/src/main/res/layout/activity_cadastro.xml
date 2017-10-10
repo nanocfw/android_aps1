@@ -4,8 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.marciano.aps1.CadastroActivity"
-    android:paddingTop="@dimen/login_top_pad">
+    tools:context="com.example.marciano.aps1.geral.CadastroActivity"
+    android:paddingTop="@dimen/default_top_pad">
 
     <EditText
         android:id="@+id/edtNome"

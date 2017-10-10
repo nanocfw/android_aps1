@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LoginActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+            android:name=".geral.LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
-            android:name=".CadastroActivity"
+            android:name=".geral.CadastroActivity"
             android:label="@string/cadastro_title" />
         <activity
-            android:name=".CadastroMetasActivity"
+            android:name=".responsavel.CadastroMetasActivity"
             android:label="@string/cadastro_metas_title">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".responsavel.MenuOpcoesActivity" />
+        <activity android:name=".filho.MinhasMetasActivity" />
+        <activity android:name=".filho.PerguntasActivity"></activity>
     </application>
 
 </manifest>

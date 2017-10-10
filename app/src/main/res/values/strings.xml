@@ -12,7 +12,7 @@
     <string name="cadastro_hint_rb_responsavel">Responsável</string>
     <string name="cadastro_btn_cadastrar">Cadastrar</string>
     <string name="cadastro_metas_desc_recompensa">Recompensa ao concluir esta meta</string>
-    <string name="cadastro_metas_lb_perc_erros">Percentual de erros</string>
+    <string name="cadastro_metas_lb_perc_erros">Percentual de erros aceitável: 0%</string>
     <string name="cadastro_metas_desc_meta">Meta a ser atingida</string>
     <string name="cadastro_metas_pontos_meta">Pontos necessários para concluir a meta</string>
     <string name="cadastro_metas_materia">Matéria</string>

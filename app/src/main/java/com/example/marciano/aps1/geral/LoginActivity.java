@@ -1,7 +1,9 @@
-package com.example.marciano.aps1;
+package com.example.marciano.aps1.geral;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.marciano.aps1.R;
 
 public class LoginActivity extends AppCompatActivity {
 

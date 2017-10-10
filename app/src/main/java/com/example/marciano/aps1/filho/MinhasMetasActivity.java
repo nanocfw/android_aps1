@@ -1,13 +1,15 @@
-package com.example.marciano.aps1;
+package com.example.marciano.aps1.filho;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CadastroActivity extends AppCompatActivity {
+import com.example.marciano.aps1.R;
+
+public class MinhasMetasActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cadastro);
+        setContentView(R.layout.activity_minhas_metas);
     }
 }
