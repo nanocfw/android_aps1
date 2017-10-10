@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.marciano.aps1.CadastroActivity"
+    android:paddingTop="@dimen/login_top_pad">
+
+    <EditText
+        android:id="@+id/edtNome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_left_margin"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:hint="@string/default_hint_nome" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_left_margin"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:hint="@string/default_hint_email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/edtSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_left_margin"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:hint="@string/default_hint_senha"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/edtConfirmacaoSenha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_left_margin"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:hint="@string/default_hint_senha_confirmacao"
+        android:inputType="textPassword" />
+
+    <RadioGroup
+        android:id="@+id/rgTipoPessoa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_left_margin"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbResponsavel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastro_hint_rb_responsavel" />
+
+        <RadioButton
+            android:id="@+id/rbFilho"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastro_hint_rb_filho" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:text="@string/cadastro_btn_cadastrar" />
+</LinearLayout>

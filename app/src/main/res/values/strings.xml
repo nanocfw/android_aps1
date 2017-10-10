@@ -1,0 +1,21 @@
+<resources>
+    <string name="login_title">Login</string>
+    <string name="default_hint_email">E-Mail</string>
+    <string name="default_hint_senha">Senha</string>
+    <string name="login_btn_login">Login</string>
+    <string name="login_btn_cadastrar">Cadastrar</string>
+    <string name="app_name">Quiz4Kids</string>
+    <string name="cadastro_title">Cadastro</string>
+    <string name="default_hint_nome">Nome</string>
+    <string name="default_hint_senha_confirmacao">Confirme a Senha</string>
+    <string name="cadastro_hint_rb_filho">Filho</string>
+    <string name="cadastro_hint_rb_responsavel">Responsável</string>
+    <string name="cadastro_btn_cadastrar">Cadastrar</string>
+    <string name="cadastro_metas_desc_recompensa">Recompensa ao concluir esta meta</string>
+    <string name="cadastro_metas_lb_perc_erros">Percentual de erros</string>
+    <string name="cadastro_metas_desc_meta">Meta a ser atingida</string>
+    <string name="cadastro_metas_pontos_meta">Pontos necessários para concluir a meta</string>
+    <string name="cadastro_metas_materia">Matéria</string>
+    <string name="cadastro_metas_title">Cadastro de Metas</string>
+    <string name="cadastro_metas_btn_cadastrar">Cadastrar</string>
+</resources>

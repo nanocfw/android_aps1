@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.marciano.aps1.CadastroMetasActivity">
+
+
+    <TextView
+        android:id="@+id/lblDescricaoMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_metas_desc_meta"
+        android:textSize="@dimen/default_lb_text_size" />
+
+    <EditText
+        android:id="@+id/edtDescricaoMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_metas_materia"
+        android:textSize="@dimen/default_lb_text_size" />
+
+    <AutoCompleteTextView
+        android:id="@+id/cbbMateria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/lblPontosMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_metas_pontos_meta"
+        android:textSize="@dimen/default_lb_text_size" />
+
+    <EditText
+        android:id="@+id/edtPontosMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/lblPercErros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_metas_lb_perc_erros"
+        android:textSize="@dimen/default_lb_text_size" />
+
+    <SeekBar
+        android:id="@+id/sbPercentualErros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:progress="0" />
+
+    <TextView
+        android:id="@+id/lblDescricaoRecompensa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cadastro_metas_desc_recompensa"
+        android:textSize="@dimen/default_lb_text_size" />
+
+    <EditText
+        android:id="@+id/edtDescricaoRecompensa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btnCadastrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:text="@string/cadastro_metas_btn_cadastrar" />
+</LinearLayout>
