@@ -18,4 +18,5 @@
     <string name="cadastro_metas_materia">Matéria</string>
     <string name="cadastro_metas_title">Cadastro de Metas</string>
     <string name="cadastro_metas_btn_cadastrar">Cadastrar</string>
+    <string name="cadastro_metas_dificuldade">Dificuldade</string>
 </resources>

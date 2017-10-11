@@ -7,4 +7,6 @@
     <dimen name="default_lb_text_size">18sp</dimen>
     <dimen name="default_top_pad_seek">20dp</dimen>
     <dimen name="default_top_pad">20dp</dimen>
+    <dimen name="default_seek_margin">7dp</dimen>
+    <dimen name="default_spinner_margin_top">15dp</dimen>
 </resources>

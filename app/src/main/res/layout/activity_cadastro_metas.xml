@@ -58,6 +58,23 @@
         android:inputType="number" />
 
     <TextView
+        android:id="@+id/lblDificuldade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_left_margin"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:text="@string/cadastro_metas_dificuldade"
+        android:textSize="@dimen/default_lb_text_size" />
+
+    <Spinner
+        android:id="@+id/cbbDificuldade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_left_margin"
+        android:layout_marginRight="@dimen/default_right_margin"
+        android:layout_marginTop="@dimen/default_spinner_margin_top"></Spinner>
+
+    <TextView
         android:id="@+id/lblPercErros"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -71,8 +88,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginLeft="7dp"
-        android:layout_marginRight="7dp"
+        android:layout_marginLeft="@dimen/default_seek_margin"
+        android:layout_marginRight="@dimen/default_seek_margin"
         android:layout_marginTop="@dimen/default_top_pad_seek"
         android:progress="0" />
 

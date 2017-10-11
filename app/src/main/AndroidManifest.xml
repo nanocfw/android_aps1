@@ -26,7 +26,9 @@
         </activity>
         <activity android:name=".responsavel.MenuOpcoesActivity" />
         <activity android:name=".filho.MinhasMetasActivity" />
-        <activity android:name=".filho.PerguntasActivity"></activity>
+        <activity android:name=".filho.PerguntasActivity" />
+        <activity android:name=".responsavel.VincularFilhosActivity" />
+        <activity android:name=".filho.PrincipalActivity"></activity>
     </application>
 
 </manifest>
