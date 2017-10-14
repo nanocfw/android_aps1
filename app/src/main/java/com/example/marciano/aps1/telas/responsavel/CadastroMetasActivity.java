@@ -1,14 +1,14 @@
-package com.example.marciano.aps1.responsavel;
+package com.example.marciano.aps1.telas.responsavel;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.marciano.aps1.R;
-import com.example.marciano.aps1.entity.enums.Dificuldade;
+import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
+import com.example.marciano.aps1.telas.DefaultActivity;
 
-public class CadastroMetasActivity extends AppCompatActivity {
+public class CadastroMetasActivity extends DefaultActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

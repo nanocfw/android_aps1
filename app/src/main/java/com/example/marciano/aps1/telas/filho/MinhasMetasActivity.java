@@ -1,11 +1,10 @@
-package com.example.marciano.aps1.filho;
+package com.example.marciano.aps1.telas.filho;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import com.example.marciano.aps1.R;
+import com.example.marciano.aps1.telas.DefaultActivity;
 
-public class MinhasMetasActivity extends AppCompatActivity {
+public class MinhasMetasActivity extends DefaultActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,3 +12,4 @@ public class MinhasMetasActivity extends AppCompatActivity {
         setContentView(R.layout.activity_minhas_metas);
     }
 }
+

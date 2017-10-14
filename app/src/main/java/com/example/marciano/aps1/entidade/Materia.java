@@ -1,10 +1,10 @@
-package com.example.marciano.aps1.entity;
+package com.example.marciano.aps1.entidade;
 
 /**
  * Created by Marciano on 10/10/2017.
  */
 
-class Materia {
+public class Materia {
     private int id;
     private String nome;
 

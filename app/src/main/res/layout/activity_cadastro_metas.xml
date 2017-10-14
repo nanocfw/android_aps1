@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="@dimen/default_top_pad"
-    tools:context="com.example.marciano.aps1.responsavel.CadastroMetasActivity">
+    tools:context=".telas.responsavel.CadastroMetasActivity">
 
 
     <TextView

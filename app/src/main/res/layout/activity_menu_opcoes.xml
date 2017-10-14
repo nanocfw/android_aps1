@@ -4,6 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.marciano.aps1.responsavel.MenuOpcoesActivity">
+    tools:context=".telas.responsavel.MenuOpcoesActivity">
 
 </android.support.constraint.ConstraintLayout>

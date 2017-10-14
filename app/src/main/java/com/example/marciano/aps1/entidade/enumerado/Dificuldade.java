@@ -1,4 +1,4 @@
-package com.example.marciano.aps1.entity.enums;
+package com.example.marciano.aps1.entidade.enumerado;
 
 /**
  * Created by Marciano on 10/10/2017.

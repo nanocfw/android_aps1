@@ -1,7 +1,8 @@
-package com.example.marciano.aps1.entity;
+package com.example.marciano.aps1.entidade;
 
-import com.example.marciano.aps1.entity.enums.TipoPessoa;
+import com.example.marciano.aps1.entidade.enumerado.TipoPessoa;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -76,6 +77,8 @@ public class Pessoa {
 
     public Pessoa() {
         super();
+        this.filhos = new ArrayList<>();
+        this.historicoUsuario = new ArrayList<>();
     }
 
 }

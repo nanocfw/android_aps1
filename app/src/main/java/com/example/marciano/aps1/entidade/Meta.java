@@ -1,6 +1,6 @@
-package com.example.marciano.aps1.entity;
+package com.example.marciano.aps1.entidade;
 
-import com.example.marciano.aps1.entity.enums.Dificuldade;
+import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ public class Meta {
     private String descricao;
     private Materia materia;
     private List<Pessoa> filhos;
-    private long pontos;
+    private long pontosMeta;
     private float percErros;
     private String recompensa;
     private Dificuldade dificuldade;
@@ -60,12 +60,12 @@ public class Meta {
         this.filhos = filhos;
     }
 
-    public long getPontos() {
-        return pontos;
+    public long getPontosMeta() {
+        return pontosMeta;
     }
 
-    public void setPontos(long pontos) {
-        this.pontos = pontos;
+    public void setPontosMeta(long pontosMeta) {
+        this.pontosMeta = pontosMeta;
     }
 
     public float getPercErros() {

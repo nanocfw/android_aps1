@@ -9,4 +9,10 @@
     <dimen name="default_top_pad">20dp</dimen>
     <dimen name="default_seek_margin">7dp</dimen>
     <dimen name="default_spinner_margin_top">15dp</dimen>
+    <dimen name="default_top_margin">20dp</dimen>
+    <dimen name="login_img_margin_top">50dp</dimen>
+    <dimen name="login_img_height">128dp</dimen>
+    <dimen name="login_img_width">256dp</dimen>
+    <dimen name="default_bottom_margin">20dp</dimen>
+    <dimen name="login_email_top_margin">50dp</dimen>
 </resources>

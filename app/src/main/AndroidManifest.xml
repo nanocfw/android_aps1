@@ -10,25 +10,36 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".geral.LoginActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-        <activity
-            android:name=".geral.CadastroActivity"
-            android:label="@string/cadastro_title" />
-        <activity
-            android:name=".responsavel.CadastroMetasActivity"
-            android:label="@string/cadastro_metas_title">
+            android:name=".telas.geral.LoginActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".responsavel.MenuOpcoesActivity" />
-        <activity android:name=".filho.MinhasMetasActivity" />
-        <activity android:name=".filho.PerguntasActivity" />
-        <activity android:name=".responsavel.VincularFilhosActivity" />
-        <activity android:name=".filho.PrincipalActivity"></activity>
+
+        <activity
+            android:name=".telas.geral.CadastroActivity"
+            android:label="@string/cadastro_title" />
+        <activity
+            android:name=".telas.responsavel.CadastroMetasActivity"
+            android:label="@string/cadastro_metas_title"></activity>
+        <activity
+            android:name=".telas.responsavel.MenuOpcoesActivity"
+            android:label="@string/menu_opcoes_title"></activity>
+        <activity
+            android:name=".telas.filho.MinhasMetasActivity"
+            android:label="@string/minhas_metas_title"></activity>
+        <activity
+            android:name=".telas.filho.DesafioActivity"
+            android:label="@string/desafios_title"></activity>
+        <activity
+            android:name=".telas.responsavel.GerenciarFilhosActivity"
+            android:label="@string/gerenciar_filhos_title"></activity>
+        <activity
+            android:name=".telas.filho.PrincipalActivity"
+            android:label="@string/app_name"></activity>
     </application>
 
 </manifest>

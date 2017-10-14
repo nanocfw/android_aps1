@@ -1,7 +1,7 @@
-package com.example.marciano.aps1.entity;
+package com.example.marciano.aps1.entidade;
 
-import com.example.marciano.aps1.entity.enums.Dificuldade;
-import com.example.marciano.aps1.entity.enums.TipoDesafio;
+import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
+import com.example.marciano.aps1.entidade.enumerado.TipoDesafio;
 
 import java.util.ArrayList;
 
@@ -15,8 +15,8 @@ public class Desafio {
     private Materia materia;
     private TipoDesafio tipoDesafio;
     private String descricao;
-    private ArrayList<Object> opcoesUsuario;
-    private int respostaCorreta;
+    private ArrayList<String> alternativas;
+    private int alternativaCorreta;
     private long pontos;
 
     public long getId() {
@@ -59,20 +59,20 @@ public class Desafio {
         this.descricao = descricao;
     }
 
-    public ArrayList<Object> getOpcoesUsuario() {
-        return opcoesUsuario;
+    public ArrayList<String> getAlternativas() {
+        return alternativas;
     }
 
-    public void setOpcoesUsuario(ArrayList<Object> opcoesUsuario) {
-        this.opcoesUsuario = opcoesUsuario;
+    public void setAlternativas(ArrayList<String> alternativas) {
+        this.alternativas = alternativas;
     }
 
-    public int getRespostaCorreta() {
-        return respostaCorreta;
+    public int getAlternativaCorreta() {
+        return alternativaCorreta;
     }
 
-    public void setRespostaCorreta(int respostaCorreta) {
-        this.respostaCorreta = respostaCorreta;
+    public void setAlternativaCorreta(int alternativaCorreta) {
+        this.alternativaCorreta = alternativaCorreta;
     }
 
     public long getPontos() {
