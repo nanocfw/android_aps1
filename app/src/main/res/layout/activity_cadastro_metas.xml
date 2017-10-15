@@ -1,119 +1,151 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingTop="@dimen/default_top_pad"
     tools:context=".telas.responsavel.CadastroMetasActivity">
 
 
-    <TextView
-        android:id="@+id/lblDescricaoMeta"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:text="@string/cadastro_metas_desc_meta"
-        android:textSize="@dimen/default_lb_text_size" />
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edtDescricaoMeta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin" />
+        <TextView
+            android:id="@+id/lblDescricaoMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text="@string/cadastro_metas_desc_meta"
+            android:textSize="@dimen/default_lb_text_size" />
 
-    <TextView
-        android:id="@+id/lblMateria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:text="@string/cadastro_metas_materia"
-        android:textSize="@dimen/default_lb_text_size" />
+        <EditText
+            android:id="@+id/edtDescricaoMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right" />
 
-    <AutoCompleteTextView
-        android:id="@+id/cbbMateria"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin" />
+        <TextView
+            android:id="@+id/lblMateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text="@string/cadastro_metas_materia"
+            android:textSize="@dimen/default_lb_text_size" />
 
-    <TextView
-        android:id="@+id/lblPontosMeta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:text="@string/cadastro_metas_pontos_meta"
-        android:textSize="@dimen/default_lb_text_size" />
+        <AutoCompleteTextView
+            android:id="@+id/cbbMateria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right" />
 
-    <EditText
-        android:id="@+id/edtPontosMeta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:inputType="number" />
+        <TextView
+            android:id="@+id/lblPontosMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text="@string/cadastro_metas_pontos_meta"
+            android:textSize="@dimen/default_lb_text_size" />
 
-    <TextView
-        android:id="@+id/lblDificuldade"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:text="@string/cadastro_metas_dificuldade"
-        android:textSize="@dimen/default_lb_text_size" />
+        <EditText
+            android:id="@+id/edtPontosMeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:inputType="number" />
 
-    <Spinner
-        android:id="@+id/cbbDificuldade"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:layout_marginTop="@dimen/default_spinner_margin_top"></Spinner>
+        <TextView
+            android:id="@+id/lblDificuldade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text="@string/cadastro_metas_dificuldade"
+            android:textSize="@dimen/default_lb_text_size" />
 
-    <TextView
-        android:id="@+id/lblPercErros"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:text="@string/cadastro_metas_lb_perc_erros"
-        android:textSize="@dimen/default_lb_text_size" />
+        <Spinner
+            android:id="@+id/cbbDificuldade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_spinner_margin_top" />
 
-    <SeekBar
-        android:id="@+id/sbPercentualErros"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="@dimen/default_seek_margin"
-        android:layout_marginRight="@dimen/default_seek_margin"
-        android:layout_marginTop="@dimen/default_top_pad_seek"
-        android:progress="0" />
+        <TextView
+            android:id="@+id/lblPercErros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text="@string/cadastro_metas_lb_perc_erros"
+            android:textSize="@dimen/default_lb_text_size" />
 
-    <TextView
-        android:id="@+id/lblDescricaoRecompensa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:text="@string/cadastro_metas_desc_recompensa"
-        android:textSize="@dimen/default_lb_text_size" />
+        <SeekBar
+            android:id="@+id/sbPercentualErros"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/default_seek_margin"
+            android:layout_marginRight="@dimen/default_seek_margin"
+            android:layout_marginTop="@dimen/default_top_pad_seek"
+            android:max="99"
+            android:progress="0" />
 
-    <EditText
-        android:id="@+id/edtDescricaoRecompensa"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin" />
+        <TextView
+            android:id="@+id/lblDescricaoRecompensa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text="@string/cadastro_metas_desc_recompensa"
+            android:textSize="@dimen/default_lb_text_size" />
 
-    <Button
-        android:id="@+id/btnCadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:text="@string/cadastro_metas_btn_cadastrar" />
-</LinearLayout>
+        <EditText
+            android:id="@+id/edtDescricaoRecompensa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right" />
+
+        <TextView
+            android:id="@+id/lblFilhos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:text="@string/cadastro_metas_filhos"
+            android:textSize="@dimen/default_lb_text_size" />
+
+        <ListView
+            android:id="@+id/lstFilhos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top" />
+
+        <Button
+            android:id="@+id/btnCadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:onClick="onBtnCadastrarClick"
+            android:text="@string/cadastro_metas_btn_cadastrar" />
+    </LinearLayout>
+</ScrollView>

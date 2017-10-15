@@ -1,9 +1,12 @@
 package com.example.marciano.aps1.util;
 
+import com.example.marciano.aps1.adapters.ProgressoFilho;
+import com.example.marciano.aps1.adapters.ProgressoMeta;
 import com.example.marciano.aps1.entidade.Desafio;
 import com.example.marciano.aps1.entidade.Materia;
 import com.example.marciano.aps1.entidade.Meta;
 import com.example.marciano.aps1.entidade.Pessoa;
+import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
 import com.example.marciano.aps1.entidade.enumerado.TipoPessoa;
 
 import java.util.ArrayList;
@@ -58,7 +61,7 @@ public class Banco {
         responsavel.setId(sequenciaPessoa++);
         responsavel.setEmail("resp@asd.com");
         responsavel.setSenha("123");
-        responsavel.setNome("Responsável");
+        responsavel.setNome("Responsável 123");
         responsavel.setPontuacao(0.0);
         responsavel.setTipoPessoa(TipoPessoa.RESPONSAVEL);
 
@@ -107,6 +110,50 @@ public class Banco {
         materia = new Materia();
         materia.setId(sequenciaMateria++);
         materia.setNome("História");
+        listaMaterias.add(materia);
+
+        Meta meta = new Meta();
+        meta.setId(sequenciaMeta++);
+        meta.setDescricao("100 pts Matemática, 50% erros");
+        meta.setRecompensa("recompensa 1");
+        meta.setDificuldade(Dificuldade.MEDIO);
+        meta.setPontosMeta(100);
+        meta.setPercErros(50);
+        meta.getFilhos().add(getPessoa(2));
+        meta.getFilhos().add(getPessoa(3));
+        meta.getFilhos().add(getPessoa(4));
+        meta.setResponsavel(getPessoa(1));
+        meta.setMateria(getMateria("Matemática"));
+        listaMetas.add(meta);
+
+        meta = new Meta();
+        meta.setId(sequenciaMeta++);
+        meta.setDescricao("100 pts Português, 10% erros");
+        meta.setRecompensa("recompensa 2");
+        meta.setDificuldade(Dificuldade.FACIL);
+        meta.setPontosMeta(100);
+        meta.setPercErros(50);
+        meta.getFilhos().add(getPessoa(2));
+        meta.getFilhos().add(getPessoa(3));
+        meta.getFilhos().add(getPessoa(4));
+        meta.setResponsavel(getPessoa(1));
+        meta.setMateria(getMateria("Português"));
+        listaMetas.add(meta);
+
+        meta = new Meta();
+        meta.setId(sequenciaMeta++);
+        meta.setDescricao("100 pts História, 60% erros");
+        meta.setRecompensa("recompensa 3");
+        meta.setDificuldade(Dificuldade.EXPERT);
+        meta.setPontosMeta(100);
+        meta.setPercErros(50);
+        meta.getFilhos().add(getPessoa(2));
+        meta.getFilhos().add(getPessoa(3));
+        meta.getFilhos().add(getPessoa(4));
+        meta.setResponsavel(getPessoa(1));
+        meta.setMateria(getMateria("História"));
+        listaMetas.add(meta);
+
 
 //        Desafio desafio = new Desafio();
 //        desafio.setId(sequenciaDesafio++);
@@ -116,11 +163,15 @@ public class Banco {
     }
 
     public void cadastrarPessoa(Pessoa pessoa) {
+        if (pessoa.getId() > 0) return;
+
         pessoa.setId(sequenciaPessoa++);
         this.listaPessoas.add(pessoa);
     }
 
     public void cadastrarMateria(Materia materia) {
+        if (materia.getId() > 0) return;
+
         materia.setId(sequenciaMateria++);
         this.listaMaterias.add(materia);
     }
@@ -137,6 +188,13 @@ public class Banco {
             if (m.getId() == idMateria)
                 return m;
         return null;
+    }
+
+    public boolean isEmailInUse(String email, long id) {
+        for (Pessoa p : listaPessoas)
+            if (p.getEmail().equals(email) && p.getId() != id)
+                return true;
+        return false;
     }
 
     public Pessoa getPessoa(String email) {
@@ -160,11 +218,51 @@ public class Banco {
         return null;
     }
 
+    public String[] getListMaterias() {
+        String[] aux = new String[listaMaterias.size()];
+
+        for (int i = 0; i < listaMaterias.size(); i++)
+            aux[i] = listaMaterias.get(i).getNome();
+
+        return aux;
+    }
+
+    public Meta getMeta(long id) {
+        for (Meta m : listaMetas)
+            if (m.getId() == id)
+                return m;
+        return null;
+    }
+
+    public void cadastrarMeta(Meta meta) {
+        if (meta.getId() > 0)
+            listaMetas.remove(listaMetas.indexOf(getMeta(meta.getId())));
+        else
+            meta.setId(sequenciaMeta++);
+        listaMetas.add(meta);
+    }
 
     public static Banco getIntance() {
         if (instance == null)
             instance = new Banco();
 
         return instance;
+    }
+
+
+    public List<ProgressoFilho> getProgressoFilhos(Meta meta) {
+        List<ProgressoFilho> aux = new ArrayList<>();
+        for (Pessoa p : meta.getFilhos())
+            aux.add(new ProgressoFilho(p, meta, Util.randomInt(0, meta.getPontosMeta()), Util.randomInt(1, 99)));
+
+        return aux;
+    }
+
+    public List<ProgressoMeta> getProgressoMetas() {
+        List<ProgressoMeta> aux = new ArrayList<>();
+        for (Meta m : listaMetas)
+            aux.add(new ProgressoMeta(m, getProgressoFilhos(m)));
+
+        return aux;
     }
 }

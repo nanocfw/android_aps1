@@ -23,6 +23,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void onBtnCadastrarClick(View view) {
         Intent telaCadastro = new Intent(this, CadastroActivity.class);
+        Bundle bundle = new Bundle();
+        telaCadastro.putExtras(bundle);
         startActivity(telaCadastro);
     }
 
@@ -45,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
         Pessoa pessoa = Banco.getIntance().getPessoa(edtEmail.getText().toString(), edtSenha.getText().toString());
         if (pessoa == null) {
             edtEmail.requestFocus();
-            Toast.makeText(this, "Email e/ou senha inválidos", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Email e/ou senha incorretos", Toast.LENGTH_SHORT).show();
             return;
         }
         Banco.getIntance().setUsuarioAutenticado(pessoa);
@@ -61,6 +63,6 @@ public class LoginActivity extends AppCompatActivity {
                 break;
             }
         }
-        this.finish();
+        // this.finish(); necessário desativar a finalização para poder testar, após alterar os dados da meta, acessar com o usuário do filho
     }
 }

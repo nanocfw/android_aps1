@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    >
+
+    <ImageButton
+        android:id="@+id/btnEditarMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:src="@drawable/ic_border_color_black_18dp" />
+
+    <TextView
+        android:id="@+id/lblDescricaoMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:text="descricao"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblRecompensa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDescricaoMeta"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:text="recompensa" />
+
+    <ListView
+        android:id="@+id/lstFilhosMeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblRecompensa"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right" />
+</RelativeLayout>

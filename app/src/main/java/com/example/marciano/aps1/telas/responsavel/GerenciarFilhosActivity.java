@@ -10,6 +10,6 @@ public class GerenciarFilhosActivity extends DefaultActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gerenciar_filhos);
+        setContentView(R.layout.activity_gerenciar_filho);
     }
 }

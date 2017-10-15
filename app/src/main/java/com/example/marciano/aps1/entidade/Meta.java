@@ -2,20 +2,22 @@ package com.example.marciano.aps1.entidade;
 
 import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
 
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Marciano on 10/10/2017.
  */
 
-public class Meta {
+public class Meta implements Serializable {
     private long id;
     private Pessoa responsavel;
     private String descricao;
     private Materia materia;
     private List<Pessoa> filhos;
-    private long pontosMeta;
-    private float percErros;
+    private int pontosMeta;
+    private int percErros;
     private String recompensa;
     private Dificuldade dificuldade;
     private boolean paga;
@@ -60,19 +62,19 @@ public class Meta {
         this.filhos = filhos;
     }
 
-    public long getPontosMeta() {
+    public int getPontosMeta() {
         return pontosMeta;
     }
 
-    public void setPontosMeta(long pontosMeta) {
+    public void setPontosMeta(int pontosMeta) {
         this.pontosMeta = pontosMeta;
     }
 
-    public float getPercErros() {
+    public int getPercErros() {
         return percErros;
     }
 
-    public void setPercErros(float percErros) {
+    public void setPercErros(int percErros) {
         this.percErros = percErros;
     }
 
@@ -102,5 +104,6 @@ public class Meta {
 
     public Meta() {
         super();
+        this.filhos = new ArrayList<>();
     }
 }

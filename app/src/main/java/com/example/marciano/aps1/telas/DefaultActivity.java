@@ -3,6 +3,7 @@ package com.example.marciano.aps1.telas;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 /**
  * Created by Marciano on 14/10/2017.
@@ -25,5 +26,9 @@ public abstract class DefaultActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void alert(String msg) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
 }

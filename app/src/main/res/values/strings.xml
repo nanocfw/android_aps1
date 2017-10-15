@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Quiz4Kids</string>
 
-    <string name="cadastro_title">Quiz4Kids - Cadastrar</string>
+    <string name="cadastro_title">Quiz4Kids - Cadastro</string>
     <string name="menu_opcoes_title">Quiz4Kids - Opções</string>
     <string name="minhas_metas_title">Quiz4Kids - Metas</string>
     <string name="desafios_title">Quiz4Kids - Desafios</string>
@@ -20,11 +20,15 @@
     <string name="cadastro_btn_cadastrar">Cadastrar</string>
 
     <string name="cadastro_metas_desc_recompensa">Recompensa ao concluir esta meta</string>
-    <string name="cadastro_metas_lb_perc_erros">Percentual de erros aceitável: 0%</string>
+    <string name="cadastro_metas_lb_perc_erros">Percentual máximo de erros: </string>
     <string name="cadastro_metas_desc_meta">Meta a ser atingida</string>
     <string name="cadastro_metas_pontos_meta">Pontos necessários para concluir a meta</string>
     <string name="cadastro_metas_materia">Matéria</string>
     <string name="cadastro_metas_title">Cadastro de Metas</string>
     <string name="cadastro_metas_btn_cadastrar">Cadastrar</string>
     <string name="cadastro_metas_dificuldade">Dificuldade</string>
+    <string name="menu_opcoes_minha_conta">Minha Conta</string>
+    <string name="menu_opcoes_filhos">Filhos</string>
+    <string name="bem_vindo">Bem vindo </string>
+    <string name="cadastro_metas_filhos">Filhos</string>
 </resources>

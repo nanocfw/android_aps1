@@ -3,13 +3,14 @@ package com.example.marciano.aps1.entidade;
 import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
 import com.example.marciano.aps1.entidade.enumerado.TipoDesafio;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
  * Created by Marciano on 10/10/2017.
  */
 
-public class Desafio {
+public class Desafio implements Serializable {
     private long id;
     private Dificuldade dificuldade;
     private Materia materia;

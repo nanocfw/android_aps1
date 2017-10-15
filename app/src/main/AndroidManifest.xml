@@ -14,14 +14,12 @@
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".telas.geral.CadastroActivity"
-            android:label="@string/cadastro_title" />
+            android:label="@string/cadastro_title"></activity>
         <activity
             android:name=".telas.responsavel.CadastroMetasActivity"
             android:label="@string/cadastro_metas_title"></activity>

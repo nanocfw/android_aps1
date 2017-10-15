@@ -12,5 +12,4 @@ public class DesafioActivity extends DefaultActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_desafio);
     }
-
 }

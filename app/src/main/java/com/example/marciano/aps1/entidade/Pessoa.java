@@ -2,6 +2,7 @@ package com.example.marciano.aps1.entidade;
 
 import com.example.marciano.aps1.entidade.enumerado.TipoPessoa;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  * Created by Marciano on 10/10/2017.
  */
 
-public class Pessoa {
+public class Pessoa implements Serializable {
     private long id;
     private String nome;
     private String email;

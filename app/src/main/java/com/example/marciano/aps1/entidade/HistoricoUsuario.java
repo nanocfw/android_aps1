@@ -1,10 +1,12 @@
 package com.example.marciano.aps1.entidade;
 
+import java.io.Serializable;
+
 /**
  * Created by Marciano on 10/10/2017.
  */
 
-public class HistoricoUsuario {
+public class HistoricoUsuario implements Serializable{
     private long id;
     private Pessoa pessoa;
     private Desafio desafio;

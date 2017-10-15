@@ -16,38 +16,40 @@
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:layout_marginTop="@dimen/login_email_top_margin"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:layout_marginTop="@dimen/login_email_margin_top"
         android:hint="@string/default_hint_email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:text="resp@asd.com" />
 
     <EditText
         android:id="@+id/edtSenha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:layout_marginTop="@dimen/default_top_margin"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:layout_marginTop="@dimen/default_margin_top"
         android:hint="@string/default_hint_senha"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:text="123"/>
 
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:layout_marginLeft="@dimen/default_left_margin"
-        android:layout_marginRight="@dimen/default_right_margin"
-        android:layout_marginTop="@dimen/default_top_margin"
-        android:text="@string/login_btn_login"
-        android:onClick="onBtnLoginClick"/>
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:onClick="onBtnLoginClick"
+        android:text="@string/login_btn_login" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/default_bottom_margin">
+        android:layout_marginBottom="@dimen/default_margin_bottom">
 
         <Button
             android:id="@+id/btnCadastrar"
@@ -55,7 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:text="@string/login_lb_cadastrar"
-            android:onClick="onBtnCadastrarClick"/>
+            android:onClick="onBtnCadastrarClick"
+            android:text="@string/login_lb_cadastrar" />
     </RelativeLayout>
 </LinearLayout>

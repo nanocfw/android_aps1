@@ -1,18 +1,20 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="default_right_margin">20dp</dimen>
+    <dimen name="default_margin_right">20dp</dimen>
     <dimen name="login_top_pad">100dp</dimen>
-    <dimen name="default_left_margin">20dp</dimen>
+    <dimen name="default_margin_left">20dp</dimen>
     <dimen name="default_lb_text_size">18sp</dimen>
     <dimen name="default_top_pad_seek">20dp</dimen>
-    <dimen name="default_top_pad">20dp</dimen>
     <dimen name="default_seek_margin">7dp</dimen>
     <dimen name="default_spinner_margin_top">15dp</dimen>
-    <dimen name="default_top_margin">20dp</dimen>
+    <dimen name="default_margin_top">20dp</dimen>
     <dimen name="login_img_margin_top">50dp</dimen>
     <dimen name="login_img_height">128dp</dimen>
     <dimen name="login_img_width">256dp</dimen>
-    <dimen name="default_bottom_margin">20dp</dimen>
-    <dimen name="login_email_top_margin">50dp</dimen>
+    <dimen name="default_margin_bottom">20dp</dimen>
+    <dimen name="login_email_margin_top">50dp</dimen>
+    <dimen name="cadastro_rgtipo_width">120dp</dimen>
+    <dimen name="menu_opcoes_nova_meta_right_margin">3dp</dimen>
+    <dimen name="lv_lista_filhos_nome_margin_top">7dp</dimen>
 </resources>
