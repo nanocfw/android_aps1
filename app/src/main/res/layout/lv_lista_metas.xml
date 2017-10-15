@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"    >
+    android:layout_height="match_parent">
 
     <ImageButton
         android:id="@+id/btnEditarMeta"
@@ -19,6 +19,7 @@
         android:layout_marginLeft="@dimen/default_margin_left"
         android:layout_marginRight="@dimen/default_margin_right"
         android:text="descricao"
+        android:textSize="@dimen/default_lb_text_size"
         android:textStyle="bold" />
 
     <TextView
@@ -31,7 +32,7 @@
         android:text="recompensa" />
 
     <ListView
-        android:id="@+id/lstFilhosMeta"
+        android:id="@+id/lvFilhosMeta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/lblRecompensa"

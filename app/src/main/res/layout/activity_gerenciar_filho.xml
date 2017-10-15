@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".telas.responsavel.GerenciarFilhosActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnNovoFilho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/default_margin_bottom"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:onClick="onBtnNovaMetaClick"
+        android:src="@drawable/ic_add_white_48dp"
+        app:layout_anchorGravity="bottom|right|end" />
+
+    <ListView
+        android:id="@+id/lvFilhos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:layout_marginTop="@dimen/default_margin_top" />
+
+</android.support.design.widget.CoordinatorLayout>

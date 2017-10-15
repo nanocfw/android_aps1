@@ -5,6 +5,13 @@
     android:layout_height="match_parent">
 
     <item
+        android:id="@+id/itemMenuPesquisar"
+        android:icon="@drawable/ic_search_black_18dp"
+        android:orderInCategory="100"
+        android:title="@string/itemMenuPesquisar"
+        app:actionViewClass="android.widget.SearchView"
+        app:showAsAction="ifRoom" />
+    <item
         android:id="@+id/itemMenuMeusDados"
         android:orderInCategory="100"
         android:title="@string/menu_opcoes_minha_conta"

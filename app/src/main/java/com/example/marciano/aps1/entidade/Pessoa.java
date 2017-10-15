@@ -82,4 +82,12 @@ public class Pessoa implements Serializable {
         this.historicoUsuario = new ArrayList<>();
     }
 
+    public boolean adicionarFilho(Pessoa pessoa) {
+        for (Pessoa p : filhos)
+            if (p.getId() == pessoa.getId())
+                return false;
+
+        filhos.add(pessoa);
+        return true;
+    }
 }

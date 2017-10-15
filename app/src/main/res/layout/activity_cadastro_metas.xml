@@ -131,7 +131,7 @@
             android:textSize="@dimen/default_lb_text_size" />
 
         <ListView
-            android:id="@+id/lstFilhos"
+            android:id="@+id/lvFilhos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/default_margin_left"

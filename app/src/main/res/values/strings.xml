@@ -2,7 +2,7 @@
     <string name="app_name">Quiz4Kids</string>
 
     <string name="cadastro_title">Quiz4Kids - Cadastro</string>
-    <string name="menu_opcoes_title">Quiz4Kids - Opções</string>
+    <string name="menu_painel_responsavel_title">Quiz4Kids - Metas</string>
     <string name="minhas_metas_title">Quiz4Kids - Metas</string>
     <string name="desafios_title">Quiz4Kids - Desafios</string>
     <string name="gerenciar_filhos_title">Quiz4Kids - Filhos</string>
@@ -31,4 +31,5 @@
     <string name="menu_opcoes_filhos">Filhos</string>
     <string name="bem_vindo">Bem vindo </string>
     <string name="cadastro_metas_filhos">Filhos</string>
+    <string name="itemMenuPesquisar">Buscar Meta</string>
 </resources>

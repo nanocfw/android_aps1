@@ -1,6 +1,5 @@
 package com.example.marciano.aps1.telas.responsavel;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,7 +11,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.marciano.aps1.R;
-import com.example.marciano.aps1.adapters.AdapterListaFilho;
+import com.example.marciano.aps1.adapters.AdapterListaFilhoCadMateria;
 import com.example.marciano.aps1.adapters.Filho;
 import com.example.marciano.aps1.entidade.Meta;
 import com.example.marciano.aps1.entidade.Pessoa;
@@ -93,9 +92,9 @@ public class CadastroMetasActivity extends DefaultActivity {
             }
         }
 
-        lv = (ListView) findViewById(R.id.lstFilhos);
-        AdapterListaFilho adapterListaFilho = new AdapterListaFilho(this, R.layout.lv_lista_filhos, lstFilhos);
-        lv.setAdapter(adapterListaFilho);
+        lv = (ListView) findViewById(R.id.lvFilhos);
+        AdapterListaFilhoCadMateria adapterListaFilhoCadMateria = new AdapterListaFilhoCadMateria(this, R.layout.lv_lista_filhos, lstFilhos);
+        lv.setAdapter(adapterListaFilhoCadMateria);
         Util.setListViewHeightBasedOnChildren(lv);
     }
 

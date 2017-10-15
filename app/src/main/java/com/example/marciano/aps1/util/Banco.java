@@ -163,16 +163,20 @@ public class Banco {
     }
 
     public void cadastrarPessoa(Pessoa pessoa) {
-        if (pessoa.getId() > 0) return;
+        if (pessoa.getId() > 0)
+            listaPessoas.remove(listaPessoas.indexOf(getPessoa(pessoa.getId())));
+        else
+            pessoa.setId(sequenciaPessoa++);
 
-        pessoa.setId(sequenciaPessoa++);
         this.listaPessoas.add(pessoa);
     }
 
     public void cadastrarMateria(Materia materia) {
-        if (materia.getId() > 0) return;
+        if (materia.getId() > 0)
+            listaMaterias.remove(listaMaterias.indexOf(getMateria(materia.getId())));
+        else
+            materia.setId(sequenciaMateria++);
 
-        materia.setId(sequenciaMateria++);
         this.listaMaterias.add(materia);
     }
 
@@ -249,7 +253,6 @@ public class Banco {
         return instance;
     }
 
-
     public List<ProgressoFilho> getProgressoFilhos(Meta meta) {
         List<ProgressoFilho> aux = new ArrayList<>();
         for (Pessoa p : meta.getFilhos())
@@ -262,6 +265,15 @@ public class Banco {
         List<ProgressoMeta> aux = new ArrayList<>();
         for (Meta m : listaMetas)
             aux.add(new ProgressoMeta(m, getProgressoFilhos(m)));
+
+        return aux;
+    }
+
+    public List<ProgressoMeta> getProgressoMetas(String busca) {
+        List<ProgressoMeta> aux = new ArrayList<>();
+        for (Meta m : listaMetas)
+            if (m.getDescricao().toLowerCase().contains(busca.toLowerCase()))
+                aux.add(new ProgressoMeta(m, getProgressoFilhos(m)));
 
         return aux;
     }

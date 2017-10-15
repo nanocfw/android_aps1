@@ -10,7 +10,7 @@ import android.widget.Toast;
 import com.example.marciano.aps1.R;
 import com.example.marciano.aps1.entidade.Pessoa;
 import com.example.marciano.aps1.telas.filho.PrincipalActivity;
-import com.example.marciano.aps1.telas.responsavel.MenuOpcoesActivity;
+import com.example.marciano.aps1.telas.responsavel.PainelResponsavelActivity;
 import com.example.marciano.aps1.util.Banco;
 
 public class LoginActivity extends AppCompatActivity {
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                 break;
             }
             case RESPONSAVEL: {
-                Intent menuOpcoes = new Intent(this, MenuOpcoesActivity.class);
+                Intent menuOpcoes = new Intent(this, PainelResponsavelActivity.class);
                 startActivity(menuOpcoes);
                 break;
             }

@@ -24,8 +24,8 @@
             android:name=".telas.responsavel.CadastroMetasActivity"
             android:label="@string/cadastro_metas_title"></activity>
         <activity
-            android:name=".telas.responsavel.MenuOpcoesActivity"
-            android:label="@string/menu_opcoes_title"></activity>
+            android:name=".telas.responsavel.PainelResponsavelActivity"
+            android:label="@string/menu_painel_responsavel_title"></activity>
         <activity
             android:name=".telas.filho.MinhasMetasActivity"
             android:label="@string/minhas_metas_title"></activity>

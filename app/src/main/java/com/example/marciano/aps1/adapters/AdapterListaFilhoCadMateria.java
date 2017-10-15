@@ -20,10 +20,10 @@ import java.util.ArrayList;
  * https://www.youtube.com/watch?v=sk9fRXu53Qs
  */
 
-public class AdapterListaFilho extends ArrayAdapter<Filho> implements android.widget.CompoundButton.OnCheckedChangeListener {
+public class AdapterListaFilhoCadMateria extends ArrayAdapter<Filho> implements android.widget.CompoundButton.OnCheckedChangeListener {
     ArrayList<Filho> lstFilhos;
 
-    public AdapterListaFilho(Context context, int resource, ArrayList<Filho> objects) {
+    public AdapterListaFilhoCadMateria(Context context, int resource, ArrayList<Filho> objects) {
         super(context, resource, objects);
         lstFilhos = objects;
     }

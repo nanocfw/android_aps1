@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.marciano.aps1.R;
@@ -49,7 +48,7 @@ public class AdapterProgressoMetas extends ArrayAdapter<ProgressoMeta> implement
         ImageButton btnEditar;
         TextView lblDescricao;
         TextView lblRecompensa;
-        ListView lstFilhosMeta;
+        ListView lvFilhosMeta;
     }
 
     @Override
@@ -64,7 +63,7 @@ public class AdapterProgressoMetas extends ArrayAdapter<ProgressoMeta> implement
             mh.btnEditar.setOnClickListener(this);
             mh.lblDescricao = (TextView) v.findViewById(R.id.lblDescricaoMeta);
             mh.lblRecompensa = (TextView) v.findViewById(R.id.lblRecompensa);
-            mh.lstFilhosMeta = (ListView) v.findViewById(R.id.lstFilhosMeta);
+            mh.lvFilhosMeta = (ListView) v.findViewById(R.id.lvFilhosMeta);
 
             v.setTag(mh);
         } else
@@ -77,11 +76,11 @@ public class AdapterProgressoMetas extends ArrayAdapter<ProgressoMeta> implement
             mh.lblDescricao.setText(m.getMeta().getDescricao());
             mh.lblRecompensa.setText(m.getMeta().getRecompensa());
 
-            if (mh.lstFilhosMeta.getTag() == null) {
+            if (mh.lvFilhosMeta.getTag() == null) {
                 AdapterProgressoFilho adapterProgressoFilho = new AdapterProgressoFilho(getContext(), R.layout.lv_lista_progresso_filhos, m.getProgressoFilhos());
-                mh.lstFilhosMeta.setAdapter(adapterProgressoFilho);
-                mh.lstFilhosMeta.setTag(adapterProgressoFilho);
-                Util.setListViewHeightBasedOnChildren(mh.lstFilhosMeta);
+                mh.lvFilhosMeta.setAdapter(adapterProgressoFilho);
+                mh.lvFilhosMeta.setTag(adapterProgressoFilho);
+                Util.setListViewHeightBasedOnChildren(mh.lvFilhosMeta);
             }
         }
         return v;
