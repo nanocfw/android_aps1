@@ -17,16 +17,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="@dimen/default_margin_left"
-        android:layout_marginRight="@dimen/default_margin_right"
-        android:text="descricao"
+        android:layout_marginRight="@dimen/lv_resp_lst_progresso_metas_desc_margin_right"
+        android:text="descricaodescricaodescricaodescricaodescricaodescricaodescricao"
         android:textSize="@dimen/default_lb_text_size"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblDificuldade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lblDescricaoMeta"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:gravity="right"
+        android:text="teste" />
 
     <TextView
         android:id="@+id/lblRecompensa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lblDescricaoMeta"
+        android:layout_below="@id/lblDificuldade"
         android:layout_marginLeft="@dimen/default_margin_left"
         android:layout_marginRight="@dimen/default_margin_right"
         android:text="recompensa" />
@@ -38,4 +48,14 @@
         android:layout_below="@id/lblRecompensa"
         android:layout_marginLeft="@dimen/default_margin_left"
         android:layout_marginRight="@dimen/default_margin_right" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lv_lst_metas_view_height"
+        android:layout_below="@id/lvFilhosMeta"
+        android:layout_marginLeft="@dimen/default_margin_left"
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:background="@color/default_transparent_view" />
 </RelativeLayout>

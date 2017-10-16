@@ -7,8 +7,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.marciano.aps1.R;
+import com.example.marciano.aps1.adapters.classes.ResponsavelProgressoFilho;
 
 import java.util.List;
 
@@ -17,12 +19,10 @@ import java.util.List;
  * Created by Marciano on 15/10/2017.
  */
 
-public class AdapterProgressoFilho extends ArrayAdapter<ProgressoFilho> {
-    private List<ProgressoFilho> lstProgressoFilhos;
+public class AdapterResponsavelProgressoFilho extends ArrayAdapter<ResponsavelProgressoFilho> {
 
-    public AdapterProgressoFilho(Context context, int resource, List<ProgressoFilho> objects) {
+    public AdapterResponsavelProgressoFilho(Context context, int resource, List<ResponsavelProgressoFilho> objects) {
         super(context, resource, objects);
-        lstProgressoFilhos = objects;
     }
 
     private static class ProgressoFilhoHolder {
@@ -38,7 +38,7 @@ public class AdapterProgressoFilho extends ArrayAdapter<ProgressoFilho> {
 
         if (v == null) {
             LayoutInflater li = LayoutInflater.from(getContext());
-            v = li.inflate(R.layout.lv_lista_progresso_filhos, null);
+            v = li.inflate(R.layout.lv_responsavel_lista_progresso_filhos, null);
         }
 
         if (v.getTag() == null) {
@@ -48,13 +48,24 @@ public class AdapterProgressoFilho extends ArrayAdapter<ProgressoFilho> {
             fh.lblPercErros = (TextView) v.findViewById(R.id.lblPercErros);
         } else fh = (ProgressoFilhoHolder) v.getTag();
 
-        ProgressoFilho p = lstProgressoFilhos.get(position);
+        ResponsavelProgressoFilho p = getItem(position);
         if (p != null) {
             fh.lblFilho.setText(p.getFilho().getNome());
             fh.lblPercErros.setText("Erros: " + p.getPercErros() + "%");
             float progresso = (((float) p.getPontos() / (float) p.getMeta().getPontosMeta()) * 100);
             progresso = (progresso > 100) ? 100 : progresso;
             fh.pbProgresso.setProgress(Math.round(progresso));
+            fh.pbProgresso.setTag(p);
+            fh.pbProgresso.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    ResponsavelProgressoFilho f = (ResponsavelProgressoFilho) view.getTag();
+                    if (f != null) {
+                        String msg = "Pontos: " + f.getPontos() + "/" + f.getMeta().getPontosMeta();
+                        Toast.makeText(getContext(), msg, Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
         }
 
         return v;

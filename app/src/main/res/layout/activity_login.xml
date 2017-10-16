@@ -1,63 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    tools:context=".telas.geral.LoginActivity">
 
-    <ImageView
-        android:layout_width="@dimen/login_img_width"
-        android:layout_height="@dimen/login_img_height"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/login_img_margin_top"
-        android:src="@drawable/logo" />
-
-    <EditText
-        android:id="@+id/edtEmail"
+    <LinearLayout
+        android:id="@+id/ll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_margin_left"
-        android:layout_marginRight="@dimen/default_margin_right"
-        android:layout_marginTop="@dimen/login_email_margin_top"
-        android:hint="@string/default_hint_email"
-        android:inputType="textEmailAddress"
-        android:text="resp@asd.com" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edtSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/default_margin_left"
-        android:layout_marginRight="@dimen/default_margin_right"
-        android:layout_marginTop="@dimen/default_margin_top"
-        android:hint="@string/default_hint_senha"
-        android:inputType="textPassword"
-        android:text="123"/>
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="@dimen/login_img_width"
+            android:layout_height="@dimen/login_img_height"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/login_img_margin_top"
+            android:src="@drawable/logo" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:layout_marginLeft="@dimen/default_margin_left"
-        android:layout_marginRight="@dimen/default_margin_right"
-        android:layout_marginTop="@dimen/default_margin_top"
-        android:onClick="onBtnLoginClick"
-        android:text="@string/login_btn_login" />
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/login_email_margin_top"
+            android:hint="@string/default_hint_email"
+            android:inputType="textEmailAddress"
+            android:text="filho1@asd.com" />
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="@dimen/default_margin_bottom">
+        <EditText
+            android:id="@+id/edtSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:hint="@string/default_hint_senha"
+            android:inputType="textPassword"
+            android:text="123" />
 
         <Button
-            android:id="@+id/btnCadastrar"
-            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:layout_marginTop="@dimen/default_margin_top"
+            android:onClick="onBtnLoginClick"
+            android:text="@string/login_btn_login" />
+
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:onClick="onBtnCadastrarClick"
-            android:text="@string/login_lb_cadastrar" />
-    </RelativeLayout>
-</LinearLayout>
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="@dimen/default_margin_bottom">
+
+            <Button
+                android:id="@+id/btnCadastrar"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|center_horizontal"
+                android:onClick="onBtnCadastrarClick"
+                android:text="@string/login_lb_cadastrar" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

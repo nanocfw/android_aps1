@@ -16,7 +16,7 @@ public enum TipoPessoa {
             case RESPONSAVEL:
                 return "Responsável";
             case FILHO:
-                return "Filho";
+                return "CadastroMateriaFilhos";
             default:
                 return "Tipo inválido";
         }

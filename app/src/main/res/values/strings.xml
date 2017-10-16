@@ -3,7 +3,7 @@
 
     <string name="cadastro_title">Quiz4Kids - Cadastro</string>
     <string name="menu_painel_responsavel_title">Quiz4Kids - Metas</string>
-    <string name="minhas_metas_title">Quiz4Kids - Metas</string>
+    <string name="painel_filho_title">Quiz4Kids - Metas</string>
     <string name="desafios_title">Quiz4Kids - Desafios</string>
     <string name="gerenciar_filhos_title">Quiz4Kids - Filhos</string>
 
@@ -20,7 +20,7 @@
     <string name="cadastro_btn_cadastrar">Cadastrar</string>
 
     <string name="cadastro_metas_desc_recompensa">Recompensa ao concluir esta meta</string>
-    <string name="cadastro_metas_lb_perc_erros">Percentual máximo de erros: </string>
+    <string name="cadastro_metas_lb_perc_erros">Percentual máximo de erros:</string>
     <string name="cadastro_metas_desc_meta">Meta a ser atingida</string>
     <string name="cadastro_metas_pontos_meta">Pontos necessários para concluir a meta</string>
     <string name="cadastro_metas_materia">Matéria</string>
@@ -29,7 +29,12 @@
     <string name="cadastro_metas_dificuldade">Dificuldade</string>
     <string name="menu_opcoes_minha_conta">Minha Conta</string>
     <string name="menu_opcoes_filhos">Filhos</string>
-    <string name="bem_vindo">Bem vindo </string>
+    <string name="bem_vindo">Bem vindo</string>
     <string name="cadastro_metas_filhos">Filhos</string>
     <string name="itemMenuPesquisar">Buscar Meta</string>
+    <string name="adpt_progresso_metas_dificuldade">Dificuldade:</string>
+    <string name="adpt_filho_progresso_metas_pontos_necessarios">Pontos Necessários:</string>
+    <string name="adpt_filho_progresso_metas_max_erros">Perc. Máx. Erros:</string>
+    <string name="adpt_filho_progresso_metas_desafios_realizados">Desafios Realizados:</string>
+    <string name="adpt_filho_progresso_metas_perc_erros">Perc. Erros:</string>
 </resources>

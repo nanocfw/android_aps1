@@ -10,10 +10,10 @@ import android.widget.SearchView;
 import android.widget.TextView;
 
 import com.example.marciano.aps1.R;
-import com.example.marciano.aps1.adapters.ProgressoMeta;
+import com.example.marciano.aps1.adapters.classes.ResponsavelProgressoMeta;
 import com.example.marciano.aps1.telas.DefaultActivity;
 import com.example.marciano.aps1.telas.geral.CadastroActivity;
-import com.example.marciano.aps1.adapters.AdapterProgressoMetas;
+import com.example.marciano.aps1.adapters.AdapterResponsavelProgressoMetas;
 import com.example.marciano.aps1.util.Banco;
 
 import java.util.List;
@@ -21,17 +21,17 @@ import java.util.List;
 
 public class PainelResponsavelActivity extends DefaultActivity {
     ListView lvMetas;
-    List<ProgressoMeta> lstProgressoMetas;
-    AdapterProgressoMetas adapter;
+    List<ResponsavelProgressoMeta> lstResponsavelProgressoMetas;
+    AdapterResponsavelProgressoMetas adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_painel_responsavel);
-        ((TextView) findViewById(R.id.lblUsuarioAutenticado)).setText(getString(R.string.bem_vindo) + Banco.getIntance().getUsuarioAutenticado().getNome());
+        ((TextView) findViewById(R.id.lblUsuarioAutenticado)).setText(getString(R.string.bem_vindo) + " " + Banco.getIntance().getUsuarioAutenticado().getNome());
         lvMetas = (ListView) findViewById(R.id.lvMetas);
-        lstProgressoMetas = Banco.getIntance().getProgressoMetas();
-        adapter = new AdapterProgressoMetas(this, R.layout.lv_lista_progresso_filhos, lstProgressoMetas);
+        lstResponsavelProgressoMetas = Banco.getIntance().getProgressoMetas();
+        adapter = new AdapterResponsavelProgressoMetas(this, R.layout.lv_responsavel_lista_progresso_filhos, lstResponsavelProgressoMetas);
         lvMetas.setAdapter(adapter);
     }
 
@@ -73,9 +73,9 @@ public class PainelResponsavelActivity extends DefaultActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == 1) {
-            lstProgressoMetas = Banco.getIntance().getProgressoMetas();
+            lstResponsavelProgressoMetas = Banco.getIntance().getProgressoMetas();
             adapter.clear();
-            adapter.addAll(lstProgressoMetas);
+            adapter.addAll(lstResponsavelProgressoMetas);
             adapter.notifyDataSetChanged();
         }
     }
@@ -84,9 +84,9 @@ public class PainelResponsavelActivity extends DefaultActivity {
         return new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
-                lstProgressoMetas = Banco.getIntance().getProgressoMetas(s);
+                lstResponsavelProgressoMetas = Banco.getIntance().getProgressoMetas(s);
                 adapter.clear();
-                adapter.addAll(lstProgressoMetas);
+                adapter.addAll(lstResponsavelProgressoMetas);
                 adapter.notifyDataSetChanged();
                 return false;
             }
@@ -94,9 +94,9 @@ public class PainelResponsavelActivity extends DefaultActivity {
             @Override
             public boolean onQueryTextChange(String s) {
                 if (s.isEmpty()) {
-                    lstProgressoMetas = Banco.getIntance().getProgressoMetas();
+                    lstResponsavelProgressoMetas = Banco.getIntance().getProgressoMetas();
                     adapter.clear();
-                    adapter.addAll(lstProgressoMetas);
+                    adapter.addAll(lstResponsavelProgressoMetas);
                     adapter.notifyDataSetChanged();
                 }
                 return false;

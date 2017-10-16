@@ -11,8 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.marciano.aps1.R;
-import com.example.marciano.aps1.adapters.AdapterListaFilhoCadMateria;
-import com.example.marciano.aps1.adapters.Filho;
+import com.example.marciano.aps1.adapters.AdapterCadastroMateriaListaFilho;
+import com.example.marciano.aps1.adapters.classes.CadastroMateriaFilhos;
 import com.example.marciano.aps1.entidade.Meta;
 import com.example.marciano.aps1.entidade.Pessoa;
 import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
@@ -26,7 +26,7 @@ public class CadastroMetasActivity extends DefaultActivity {
 
     private Meta meta;
     private String[] materias;
-    private ArrayList<Filho> lstFilhos;
+    private ArrayList<CadastroMateriaFilhos> lstCadastroMateriaFilhoses;
     ListView lv;
 
     @Override
@@ -52,7 +52,7 @@ public class CadastroMetasActivity extends DefaultActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 TextView lbPercErros = (TextView) findViewById(R.id.lblPercErros);
-                lbPercErros.setText(getString(R.string.cadastro_metas_lb_perc_erros) + seekBar.getProgress() + "%");
+                lbPercErros.setText(getString(R.string.cadastro_metas_lb_perc_erros) + " " + seekBar.getProgress() + "%");
             }
 
             @Override
@@ -64,9 +64,9 @@ public class CadastroMetasActivity extends DefaultActivity {
             }
         });
 
-        lstFilhos = new ArrayList<>();
+        lstCadastroMateriaFilhoses = new ArrayList<>();
         for (Pessoa p : Banco.getIntance().getUsuarioAutenticado().getFilhos())
-            lstFilhos.add(new Filho(p));
+            lstCadastroMateriaFilhoses.add(new CadastroMateriaFilhos(p));
 
         Bundle bundle = getIntent().getExtras();
         if (bundle != null)
@@ -86,15 +86,15 @@ public class CadastroMetasActivity extends DefaultActivity {
             edtDescricaoRecompensa.setText(meta.getRecompensa());
 
             for (Pessoa p : meta.getFilhos()) {
-                for (Filho f : lstFilhos)
+                for (CadastroMateriaFilhos f : lstCadastroMateriaFilhoses)
                     if (f.getFilho().getId() == p.getId())
                         f.setSelecionado(true);
             }
         }
 
         lv = (ListView) findViewById(R.id.lvFilhos);
-        AdapterListaFilhoCadMateria adapterListaFilhoCadMateria = new AdapterListaFilhoCadMateria(this, R.layout.lv_lista_filhos, lstFilhos);
-        lv.setAdapter(adapterListaFilhoCadMateria);
+        AdapterCadastroMateriaListaFilho adapterCadastroMateriaListaFilho = new AdapterCadastroMateriaListaFilho(this, R.layout.lv_lista_filhos, lstCadastroMateriaFilhoses);
+        lv.setAdapter(adapterCadastroMateriaListaFilho);
         Util.setListViewHeightBasedOnChildren(lv);
     }
 
@@ -136,7 +136,7 @@ public class CadastroMetasActivity extends DefaultActivity {
             return;
         }
         boolean selecionouFilhos = false;
-        for (Filho f : lstFilhos)
+        for (CadastroMateriaFilhos f : lstCadastroMateriaFilhoses)
             selecionouFilhos = selecionouFilhos || f.isSelecionado();
 
         if (!selecionouFilhos) {
@@ -158,7 +158,7 @@ public class CadastroMetasActivity extends DefaultActivity {
         meta.setRecompensa(edtDescricaoRecompensa.getText().toString());
         meta.getFilhos().clear();
 
-        for (Filho f : lstFilhos)
+        for (CadastroMateriaFilhos f : lstCadastroMateriaFilhoses)
             if (f.isSelecionado())
                 meta.getFilhos().add(f.getFilho());
 

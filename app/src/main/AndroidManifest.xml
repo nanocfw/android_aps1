@@ -4,14 +4,14 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
             android:name=".telas.geral.LoginActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,17 +27,14 @@
             android:name=".telas.responsavel.PainelResponsavelActivity"
             android:label="@string/menu_painel_responsavel_title"></activity>
         <activity
-            android:name=".telas.filho.MinhasMetasActivity"
-            android:label="@string/minhas_metas_title"></activity>
-        <activity
             android:name=".telas.filho.DesafioActivity"
             android:label="@string/desafios_title"></activity>
         <activity
             android:name=".telas.responsavel.GerenciarFilhosActivity"
             android:label="@string/gerenciar_filhos_title"></activity>
         <activity
-            android:name=".telas.filho.PrincipalActivity"
-            android:label="@string/app_name"></activity>
+            android:name=".telas.filho.PainelFilhoActivity"
+            android:label="@string/painel_filho_title"></activity>
     </application>
 
 </manifest>

@@ -9,12 +9,16 @@
     <dimen name="default_seek_margin">7dp</dimen>
     <dimen name="default_spinner_margin_top">15dp</dimen>
     <dimen name="default_margin_top">20dp</dimen>
-    <dimen name="login_img_margin_top">50dp</dimen>
+    <dimen name="login_img_margin_top">35dp</dimen>
     <dimen name="login_img_height">128dp</dimen>
     <dimen name="login_img_width">256dp</dimen>
     <dimen name="default_margin_bottom">20dp</dimen>
-    <dimen name="login_email_margin_top">50dp</dimen>
+    <dimen name="login_email_margin_top">40dp</dimen>
     <dimen name="cadastro_rgtipo_width">120dp</dimen>
     <dimen name="menu_opcoes_nova_meta_right_margin">3dp</dimen>
     <dimen name="lv_lista_filhos_nome_margin_top">7dp</dimen>
+    <dimen name="lv_resp_lst_progresso_metas_desc_margin_right">60dp</dimen>
+    <dimen name="lv_lst_metas_grd_margin_top">5dp</dimen>
+    <dimen name="lv_lst_metas_view_height">1dp</dimen>
+    <dimen name="adpt_filho_progresso_metas_grd_right_margin">5dp</dimen>
 </resources>

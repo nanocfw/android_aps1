@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 
 import com.example.marciano.aps1.R;
-import com.example.marciano.aps1.telas.responsavel.CadastroMetasActivity;
+import com.example.marciano.aps1.adapters.classes.CadastroMateriaFilhos;
 
 import java.util.ArrayList;
 
@@ -20,12 +20,10 @@ import java.util.ArrayList;
  * https://www.youtube.com/watch?v=sk9fRXu53Qs
  */
 
-public class AdapterListaFilhoCadMateria extends ArrayAdapter<Filho> implements android.widget.CompoundButton.OnCheckedChangeListener {
-    ArrayList<Filho> lstFilhos;
+public class AdapterCadastroMateriaListaFilho extends ArrayAdapter<CadastroMateriaFilhos> implements android.widget.CompoundButton.OnCheckedChangeListener {
 
-    public AdapterListaFilhoCadMateria(Context context, int resource, ArrayList<Filho> objects) {
+    public AdapterCadastroMateriaListaFilho(Context context, int resource, ArrayList<CadastroMateriaFilhos> objects) {
         super(context, resource, objects);
-        lstFilhos = objects;
     }
 
     private static class FilhosHolder {
@@ -43,14 +41,13 @@ public class AdapterListaFilhoCadMateria extends ArrayAdapter<Filho> implements 
 
             fh = new FilhosHolder();
             fh.chkSelecionado = (CheckBox) v.findViewById(R.id.chkSelecionado);
-            fh.lblNome = (TextView) v.findViewById(R.id.lblNome);
             fh.chkSelecionado.setOnCheckedChangeListener(this);
             v.setTag(fh);
         } else
             fh = (FilhosHolder) v.getTag();
 
-        Filho f = lstFilhos.get(position);
-        fh.lblNome.setText(f.getFilho().getNome());
+        CadastroMateriaFilhos f = getItem(position);
+        fh.chkSelecionado.setText(f.getFilho().getNome());
         fh.chkSelecionado.setTag(f);
         fh.chkSelecionado.setChecked(f.isSelecionado());
 
@@ -59,7 +56,7 @@ public class AdapterListaFilhoCadMateria extends ArrayAdapter<Filho> implements 
 
     @Override
     public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-        Filho f = (Filho) compoundButton.getTag();
+        CadastroMateriaFilhos f = (CadastroMateriaFilhos) compoundButton.getTag();
         f.setSelecionado(isChecked);
     }
 }

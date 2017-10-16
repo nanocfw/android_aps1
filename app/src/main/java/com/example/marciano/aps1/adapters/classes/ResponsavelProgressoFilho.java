@@ -1,4 +1,4 @@
-package com.example.marciano.aps1.adapters;
+package com.example.marciano.aps1.adapters.classes;
 
 import com.example.marciano.aps1.entidade.Meta;
 import com.example.marciano.aps1.entidade.Pessoa;
@@ -7,11 +7,12 @@ import com.example.marciano.aps1.entidade.Pessoa;
  * Created by Marciano on 15/10/2017.
  */
 
-public class ProgressoFilho {
+public class ResponsavelProgressoFilho {
     private Pessoa filho;
     private Meta meta;
     private long pontos;
     private int percErros;
+    private int desafiosRealizados;
 
     public Pessoa getFilho() {
         return filho;
@@ -45,10 +46,19 @@ public class ProgressoFilho {
         this.percErros = percErros;
     }
 
-    public ProgressoFilho(Pessoa filho, Meta meta, long pontos, int percErros) {
+    public int getDesafiosRealizados() {
+        return desafiosRealizados;
+    }
+
+    public void setDesafiosRealizados(int desafiosRealizados) {
+        this.desafiosRealizados = desafiosRealizados;
+    }
+
+    public ResponsavelProgressoFilho(Pessoa filho, Meta meta, long pontos, int percErros, int desafiosRealizados) {
         this.filho = filho;
         this.meta = meta;
         this.pontos = pontos;
         this.percErros = percErros;
+        this.desafiosRealizados = desafiosRealizados;
     }
 }

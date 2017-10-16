@@ -30,5 +30,7 @@
         android:layout_below="@id/lblFilho"
         android:layout_gravity="right"
         android:layout_marginLeft="@dimen/default_margin_left"
-        android:layout_marginRight="@dimen/default_margin_right" />
+        android:layout_marginRight="@dimen/default_margin_right"
+        android:progress="50"
+        android:progressDrawable="@drawable/gradient_progress" />
 </RelativeLayout>

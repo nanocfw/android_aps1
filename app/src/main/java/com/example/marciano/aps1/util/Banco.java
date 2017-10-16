@@ -1,7 +1,10 @@
 package com.example.marciano.aps1.util;
 
-import com.example.marciano.aps1.adapters.ProgressoFilho;
-import com.example.marciano.aps1.adapters.ProgressoMeta;
+import android.widget.ListView;
+
+import com.example.marciano.aps1.adapters.classes.FilhoProgressoMeta;
+import com.example.marciano.aps1.adapters.classes.ResponsavelProgressoFilho;
+import com.example.marciano.aps1.adapters.classes.ResponsavelProgressoMeta;
 import com.example.marciano.aps1.entidade.Desafio;
 import com.example.marciano.aps1.entidade.Materia;
 import com.example.marciano.aps1.entidade.Meta;
@@ -71,7 +74,7 @@ public class Banco {
         filho.setId(sequenciaPessoa++);
         filho.setEmail("filho1@asd.com");
         filho.setSenha("123");
-        filho.setNome("Filho 1");
+        filho.setNome("CadastroMateriaFilhos 1");
         filho.setPontuacao(0.0);
         filho.setTipoPessoa(TipoPessoa.FILHO);
         responsavel.getFilhos().add(filho);
@@ -81,7 +84,7 @@ public class Banco {
         filho.setId(sequenciaPessoa++);
         filho.setEmail("filho2@asd.com");
         filho.setSenha("123");
-        filho.setNome("Filho 2");
+        filho.setNome("CadastroMateriaFilhos 2");
         filho.setPontuacao(0.0);
         filho.setTipoPessoa(TipoPessoa.FILHO);
         responsavel.getFilhos().add(filho);
@@ -91,7 +94,7 @@ public class Banco {
         filho.setId(sequenciaPessoa++);
         filho.setEmail("filho3@asd.com");
         filho.setSenha("123");
-        filho.setNome("Filho 3");
+        filho.setNome("CadastroMateriaFilhos 3");
         filho.setPontuacao(0.0);
         filho.setTipoPessoa(TipoPessoa.FILHO);
         responsavel.getFilhos().add(filho);
@@ -164,16 +167,16 @@ public class Banco {
 
     public void cadastrarPessoa(Pessoa pessoa) {
         if (pessoa.getId() > 0)
-            listaPessoas.remove(listaPessoas.indexOf(getPessoa(pessoa.getId())));
-        else
+            listaPessoas.set(listaPessoas.indexOf(getPessoa(pessoa.getId())), pessoa);
+        else {
             pessoa.setId(sequenciaPessoa++);
-
-        this.listaPessoas.add(pessoa);
+            this.listaPessoas.add(pessoa);
+        }
     }
 
     public void cadastrarMateria(Materia materia) {
         if (materia.getId() > 0)
-            listaMaterias.remove(listaMaterias.indexOf(getMateria(materia.getId())));
+            listaMaterias.set(listaMaterias.indexOf(getMateria(materia.getId())), materia);
         else
             materia.setId(sequenciaMateria++);
 
@@ -240,10 +243,11 @@ public class Banco {
 
     public void cadastrarMeta(Meta meta) {
         if (meta.getId() > 0)
-            listaMetas.remove(listaMetas.indexOf(getMeta(meta.getId())));
-        else
+            listaMetas.set(listaMetas.indexOf(getMeta(meta.getId())), meta);
+        else {
             meta.setId(sequenciaMeta++);
-        listaMetas.add(meta);
+            listaMetas.add(meta);
+        }
     }
 
     public static Banco getIntance() {
@@ -253,28 +257,37 @@ public class Banco {
         return instance;
     }
 
-    public List<ProgressoFilho> getProgressoFilhos(Meta meta) {
-        List<ProgressoFilho> aux = new ArrayList<>();
+    public List<ResponsavelProgressoFilho> getProgressoFilhos(Meta meta) {
+        List<ResponsavelProgressoFilho> aux = new ArrayList<>();
         for (Pessoa p : meta.getFilhos())
-            aux.add(new ProgressoFilho(p, meta, Util.randomInt(0, meta.getPontosMeta()), Util.randomInt(1, 99)));
+            aux.add(new ResponsavelProgressoFilho(p, meta, Util.randomInt(0, meta.getPontosMeta()), Util.randomInt(1, 99), Util.randomInt(1, 99)));
 
         return aux;
     }
 
-    public List<ProgressoMeta> getProgressoMetas() {
-        List<ProgressoMeta> aux = new ArrayList<>();
+    public List<ResponsavelProgressoMeta> getProgressoMetas() {
+        List<ResponsavelProgressoMeta> aux = new ArrayList<>();
         for (Meta m : listaMetas)
-            aux.add(new ProgressoMeta(m, getProgressoFilhos(m)));
+            aux.add(new ResponsavelProgressoMeta(m, getProgressoFilhos(m)));
 
         return aux;
     }
 
-    public List<ProgressoMeta> getProgressoMetas(String busca) {
-        List<ProgressoMeta> aux = new ArrayList<>();
+    public List<ResponsavelProgressoMeta> getProgressoMetas(String busca) {
+        List<ResponsavelProgressoMeta> aux = new ArrayList<>();
         for (Meta m : listaMetas)
             if (m.getDescricao().toLowerCase().contains(busca.toLowerCase()))
-                aux.add(new ProgressoMeta(m, getProgressoFilhos(m)));
+                aux.add(new ResponsavelProgressoMeta(m, getProgressoFilhos(m)));
 
+        return aux;
+    }
+
+    public List<FilhoProgressoMeta> getProgressoMetasFilho(Pessoa filho) {
+        List<FilhoProgressoMeta> aux = new ArrayList<>();
+        for (Meta m : listaMetas)
+            for (Pessoa p : m.getFilhos())
+                if (p.getId() == filho.getId())
+                    aux.add(new FilhoProgressoMeta(m, Util.randomInt(0, m.getPontosMeta()), Util.randomInt(1, 99), Util.randomInt(1, 99)));
         return aux;
     }
 }

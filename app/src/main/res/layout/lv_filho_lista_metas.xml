@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/lblDescricaoMeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:text="teste"
+        android:textSize="@dimen/default_lb_text_size"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/lblRecompensa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lblDescricaoMeta"
+        android:text="testetestetestetestetestetestetestetestetestetestetestetestetestetestetestetestetestetesteteste" />
+
+    <TextView
+        android:id="@+id/lblDificuldade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/lblRecompensa"
+        android:text="Dificuldade: Difícil" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lv_lst_metas_view_height"
+        android:layout_below="@id/lblDificuldade"
+        android:background="@color/default_transparent_view" />
+
+    <GridLayout
+        android:id="@+id/grdProgresso"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:layout_marginTop="@dimen/lv_lst_metas_grd_margin_top"
+        android:columnCount="4"
+        android:rowCount="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="@string/adpt_filho_progresso_metas_pontos_necessarios"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMinPontos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
+            android:gravity="right"
+            android:text="100" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="@string/adpt_filho_progresso_metas_max_erros"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblMaxErros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
+            android:gravity="right"
+            android:text="50%" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="@string/adpt_filho_progresso_metas_desafios_realizados"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblDesafiosRealizados"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
+            android:gravity="right"
+            android:text="10000" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="@string/adpt_filho_progresso_metas_perc_erros"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/lblPercErros"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
+            android:gravity="right"
+            android:text="100%" />
+    </GridLayout>
+
+    <ProgressBar
+        android:id="@+id/pbProgresso"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grdProgresso"
+        android:layout_gravity="right"
+        android:progress="50"
+        android:progressDrawable="@drawable/gradient_progress" />
+
+    <View
+        android:id="@+id/viewBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/lv_lst_metas_view_height"
+        android:layout_below="@id/pbProgresso"
+        android:layout_marginTop="@dimen/default_margin_top"
+        android:background="@color/default_transparent_view" />
+</RelativeLayout>

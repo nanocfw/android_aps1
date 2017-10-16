@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.example.marciano.aps1.R;
 import com.example.marciano.aps1.entidade.Pessoa;
-import com.example.marciano.aps1.telas.filho.PrincipalActivity;
+import com.example.marciano.aps1.telas.filho.PainelFilhoActivity;
 import com.example.marciano.aps1.telas.responsavel.PainelResponsavelActivity;
 import com.example.marciano.aps1.util.Banco;
 
@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         Banco.getIntance().setUsuarioAutenticado(pessoa);
         switch (pessoa.getTipoPessoa()) {
             case FILHO: {
-                Intent telaPrincipal = new Intent(this, PrincipalActivity.class);
+                Intent telaPrincipal = new Intent(this, PainelFilhoActivity.class);
                 startActivity(telaPrincipal);
                 break;
             }

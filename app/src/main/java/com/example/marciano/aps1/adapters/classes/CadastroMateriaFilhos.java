@@ -1,4 +1,4 @@
-package com.example.marciano.aps1.adapters;
+package com.example.marciano.aps1.adapters.classes;
 
 import com.example.marciano.aps1.entidade.Pessoa;
 
@@ -6,7 +6,7 @@ import com.example.marciano.aps1.entidade.Pessoa;
  * Created by Marciano on 15/10/2017.
  */
 
-public class Filho {
+public class CadastroMateriaFilhos {
     private Pessoa filho;
     private boolean selecionado = false;
 
@@ -26,7 +26,7 @@ public class Filho {
         this.selecionado = selecionado;
     }
 
-    public Filho(Pessoa filho) {
+    public CadastroMateriaFilhos(Pessoa filho) {
         this.filho = filho;
     }
 }
