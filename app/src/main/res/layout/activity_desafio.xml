@@ -1,9 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".telas.filho.DesafioActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/grdDesafioMetas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:columnCount="2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:text="Meta: "
+                android:textSize="@dimen/default_lb_text_size" />
+
+            <Spinner
+                android:id="@+id/cbbMeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="7"
+                android:spinnerMode="dialog" />
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@id/grdDesafioMetas"
+            android:layout_marginLeft="@dimen/default_margin_left"
+            android:layout_marginRight="@dimen/default_margin_right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblMateria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="testetestetestetestetestetestetestetestetestetestetestet"
+                android:textSize="@dimen/default_lb_text_size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lblDescricaoMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:text="testetestetestetestetestetestetestetestetestetestetestet"
+                android:textSize="@dimen/default_lb_text_size"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/lvOpcoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_top" />
+
+            <TextView
+                android:id="@+id/lblDificuldade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_top"
+                android:text="qqer uma"
+                android:textSize="@dimen/default_lb_text_size" />
+
+            <Button
+                android:id="@+id/btnEnviarResposta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onBtnEnviarClick"
+                android:text="@string/desafio_btn_enviar" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

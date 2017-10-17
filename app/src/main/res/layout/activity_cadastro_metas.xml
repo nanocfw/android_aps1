@@ -80,7 +80,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/default_margin_left"
             android:layout_marginRight="@dimen/default_margin_right"
-            android:layout_marginTop="@dimen/default_spinner_margin_top" />
+            android:layout_marginTop="@dimen/default_spinner_margin_top"
+            android:spinnerMode="dialog" />
 
         <TextView
             android:id="@+id/lblPercErros"

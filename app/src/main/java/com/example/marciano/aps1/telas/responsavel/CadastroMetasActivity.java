@@ -44,7 +44,7 @@ public class CadastroMetasActivity extends DefaultActivity {
         cbbMateria.setAdapter(adapterMateria);
 
         Spinner cbbDificuldade = (Spinner) findViewById(R.id.cbbDificuldade);
-        ArrayAdapter<String> adapterDificuldade = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Dificuldade.getAll());
+        ArrayAdapter<String> adapterDificuldade = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, Dificuldade.getAll());
         cbbDificuldade.setAdapter(adapterDificuldade);
 
         SeekBar sbMaxErros = (SeekBar) findViewById(R.id.sbPercentualErros);

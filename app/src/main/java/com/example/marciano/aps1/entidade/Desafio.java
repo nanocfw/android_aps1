@@ -1,7 +1,6 @@
 package com.example.marciano.aps1.entidade;
 
 import com.example.marciano.aps1.entidade.enumerado.Dificuldade;
-import com.example.marciano.aps1.entidade.enumerado.TipoDesafio;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -14,11 +13,9 @@ public class Desafio implements Serializable {
     private long id;
     private Dificuldade dificuldade;
     private Materia materia;
-    private TipoDesafio tipoDesafio;
     private String descricao;
     private ArrayList<String> alternativas;
     private int alternativaCorreta;
-    private long pontos;
 
     public long getId() {
         return id;
@@ -42,14 +39,6 @@ public class Desafio implements Serializable {
 
     public void setMateria(Materia materia) {
         this.materia = materia;
-    }
-
-    public TipoDesafio getTipoDesafio() {
-        return tipoDesafio;
-    }
-
-    public void setTipoDesafio(TipoDesafio tipoDesafio) {
-        this.tipoDesafio = tipoDesafio;
     }
 
     public String getDescricao() {
@@ -76,15 +65,24 @@ public class Desafio implements Serializable {
         this.alternativaCorreta = alternativaCorreta;
     }
 
-    public long getPontos() {
-        return pontos;
+    public int getPontos() {
+        switch (dificuldade) {
+            case FACIL:
+                return 10;
+            case MEDIO:
+                return 20;
+            case DIFICIL:
+                return 30;
+            case EXPERT:
+                return 40;
+            default:
+                return 0;
+        }
     }
 
-    public void setPontos(long pontos) {
-        this.pontos = pontos;
-    }
 
     public Desafio() {
         super();
+        this.alternativas = new ArrayList<>();
     }
 }

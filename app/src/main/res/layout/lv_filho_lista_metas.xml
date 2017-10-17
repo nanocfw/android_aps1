@@ -49,65 +49,65 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/adpt_filho_progresso_metas_pontos_necessarios"
-            android:textStyle="bold" />
+            android:text="@string/adpt_filho_progresso_metas_pontos_necessarios" />
 
         <TextView
             android:id="@+id/lblMinPontos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:layout_gravity="right|end"
             android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
-            android:gravity="right"
-            android:text="100" />
+            android:text="100"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/adpt_filho_progresso_metas_max_erros"
-            android:textStyle="bold" />
+            android:text="@string/adpt_filho_progresso_metas_max_erros" />
 
         <TextView
             android:id="@+id/lblMaxErros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:layout_gravity="right|end"
             android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
-            android:gravity="right"
-            android:text="50%" />
+            android:text="50%"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/adpt_filho_progresso_metas_desafios_realizados"
-            android:textStyle="bold" />
+            android:text="@string/adpt_filho_progresso_metas_desafios_realizados" />
 
         <TextView
             android:id="@+id/lblDesafiosRealizados"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:layout_gravity="right|end"
             android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
-            android:gravity="right"
-            android:text="10000" />
+            android:text="10000"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
-            android:text="@string/adpt_filho_progresso_metas_perc_erros"
-            android:textStyle="bold" />
+            android:text="@string/adpt_filho_progresso_metas_perc_erros" />
 
         <TextView
             android:id="@+id/lblPercErros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
+            android:layout_gravity="right|end"
             android:layout_marginRight="@dimen/adpt_filho_progresso_metas_grd_right_margin"
-            android:gravity="right"
-            android:text="100%" />
+            android:text="100%"
+            android:textStyle="bold" />
     </GridLayout>
 
     <ProgressBar

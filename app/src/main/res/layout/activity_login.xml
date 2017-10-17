@@ -28,8 +28,7 @@
             android:layout_marginRight="@dimen/default_margin_right"
             android:layout_marginTop="@dimen/login_email_margin_top"
             android:hint="@string/default_hint_email"
-            android:inputType="textEmailAddress"
-            android:text="filho1@asd.com" />
+            android:inputType="textEmailAddress" />
 
         <EditText
             android:id="@+id/edtSenha"
@@ -39,8 +38,7 @@
             android:layout_marginRight="@dimen/default_margin_right"
             android:layout_marginTop="@dimen/default_margin_top"
             android:hint="@string/default_hint_senha"
-            android:inputType="textPassword"
-            android:text="123" />
+            android:inputType="textPassword" />
 
         <Button
             android:id="@+id/btnLogin"

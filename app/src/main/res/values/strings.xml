@@ -37,4 +37,8 @@
     <string name="adpt_filho_progresso_metas_max_erros">Perc. Máx. Erros:</string>
     <string name="adpt_filho_progresso_metas_desafios_realizados">Desafios Realizados:</string>
     <string name="adpt_filho_progresso_metas_perc_erros">Perc. Erros:</string>
+    <string name="menu_filho_minhas_metas">Minhas Metas</string>
+    <string name="desafio_btn_enviar">Enviar</string>
+    <string name="desafio_lbl_dificuldade">Dificuldade:</string>
+    <string name="desafio_lbl_materia">Matéria:</string>
 </resources>
